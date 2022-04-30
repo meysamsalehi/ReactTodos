@@ -16,7 +16,12 @@ const TodoApp = () => {
   //   };
 
   const completeTodo = (id) => {
-    console.log(id);
+    const index = todo.findIndex((t) => t.id === id);
+    const selectedTodo = { ...todo[index] };
+    selectedTodo.isCompleted = !selectedTodo.isCompleted;
+    const updatedTodo = [...todo];
+    updatedTodo[index] = selectedTodo;
+    setTodo(updatedTodo);
   };
 
   return (
