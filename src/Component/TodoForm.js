@@ -24,13 +24,9 @@ const TodoForm = ({ todo, setTodo }) => {
     setInputValue("");
   };
 
-
-
-  
-
   return (
     <form
-      className="flex justify-center align-items lg:w-1/2 mt-10"
+      className="flex justify-center align-items mt-10"
       onSubmit={submitHandler}
     >
       <h1>salam</h1>

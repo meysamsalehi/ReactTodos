@@ -20,11 +20,10 @@ const TodoApp = () => {
       {/* //solve 1 */}
       {/* <TodoForm addTodoHandler={addTodoHandler} /> */}
 
-      
       {/* solve2 */}
       <TodoForm setTodo={setTodo} todo={todo} />
-
-      <TodoList />
+      <br></br>
+      <TodoList todos={todo} />
     </div>
   );
 };
