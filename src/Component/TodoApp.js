@@ -24,6 +24,11 @@ const TodoApp = () => {
     setTodo(updatedTodo);
   };
 
+  const removeTodo = (id) => {
+    const filteredTodo = todo.filter((t) => t.id !== id);
+    setTodo(filteredTodo);
+  };
+
   return (
     <div>
       {/* //solve 1 */}
@@ -32,7 +37,7 @@ const TodoApp = () => {
       {/* solve2 */}
       <TodoForm setTodo={setTodo} todo={todo} />
       <br></br>
-      <TodoList todos={todo} onComplete={completeTodo} />
+      <TodoList todos={todo} onComplete={completeTodo} onRemove={removeTodo} />
     </div>
   );
 };

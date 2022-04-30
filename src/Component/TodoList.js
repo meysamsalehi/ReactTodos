@@ -1,6 +1,6 @@
 import Todo from "./Todo";
 
-const TodoList = ({ todos, onComplete }) => {
+const TodoList = ({ todos, onComplete, onRemove }) => {
   const renderedList = () => {
     if (todos.length === 0) return <div>add some one to</div>;
 
@@ -11,6 +11,7 @@ const TodoList = ({ todos, onComplete }) => {
             key={todo.id}
             todo={todo}
             onComplete={onComplete}
+            onRemove={onRemove}
           />
         </>
       );
