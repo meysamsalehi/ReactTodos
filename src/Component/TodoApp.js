@@ -15,6 +15,10 @@ const TodoApp = () => {
   //     setTodo([...todo, newTodo]);
   //   };
 
+  const completeTodo = (id) => {
+    console.log(id);
+  };
+
   return (
     <div>
       {/* //solve 1 */}
@@ -23,7 +27,7 @@ const TodoApp = () => {
       {/* solve2 */}
       <TodoForm setTodo={setTodo} todo={todo} />
       <br></br>
-      <TodoList todos={todo} />
+      <TodoList todos={todo} onComplete={completeTodo} />
     </div>
   );
 };
